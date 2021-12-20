@@ -19,7 +19,7 @@ opt.pastetoggle = "<F2>" -- use <F2> as paste toggle
 map("n", "<leader>c", ":nohl<CR>", default_opts)
 
 -- map Esc to jj
--- map('i', 'jj', '<Esc>', default_opts)
+map('i', 'jj', '<Esc>', default_opts)
 
 -- don't use arrow keys
 map("", "<up>", "<nop>", default_opts)
