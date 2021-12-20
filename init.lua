@@ -4,7 +4,7 @@
 -- You should keep plugins module load before other modules so if
 -- some plugins fall down you can still use PackerSync to fix it.
 local files = {
---  'colors',
+  'colors',
   'cores',
   'snippets',
   'lsp',

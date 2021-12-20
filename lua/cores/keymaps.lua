@@ -4,50 +4,49 @@
 -----------------------------------------------------------
 
 local map = vim.api.nvim_set_keymap
-local default_opts = { noremap = true, silent = false }
+local default_opts = {noremap = true, silent = false}
 local g = vim.g
 local opt = vim.opt
 -----------------------------------------------------------
 -- Neovim shortcuts:
 -----------------------------------------------------------
 
-g.mapleader = ','             -- change leader to a comma
-opt.mouse = 'c'               -- enable mouse support
-opt.pastetoggle = '<F2>'      -- use <F2> as paste toggle
+g.mapleader = "," -- change leader to a comma
+opt.mouse = "c" -- enable mouse support
+opt.pastetoggle = "<F2>" -- use <F2> as paste toggle
 
 -- clear search highlighting
-map('n', '<leader>c', ':nohl<CR>', default_opts)
+map("n", "<leader>c", ":nohl<CR>", default_opts)
 
 -- map Esc to jj
 -- map('i', 'jj', '<Esc>', default_opts)
 
 -- don't use arrow keys
-map('', '<up>', '<nop>', default_opts)
-map('', '<down>', '<nop>', default_opts)
-map('', '<left>', '<nop>', default_opts)
-map('', '<right>', '<nop>', default_opts)
+map("", "<up>", "<nop>", default_opts)
+map("", "<down>", "<nop>", default_opts)
+map("", "<left>", "<nop>", default_opts)
+map("", "<right>", "<nop>", default_opts)
 
 -- move cursor in Insert-mode using Ctrl + {h,j,k,l}
 --[[ map('i', '<C-h>', '<left>', default_opts)
 map('i', '<C-j>', '<down>', default_opts)
 map('i', '<C-k>', '<up>', default_opts)
 map('i', '<C-l>', '<right>', default_opts) ]]
-
 -- fast saving with <leader> and w
-map('n', '<leader>w', ':w<CR>', default_opts)
-map('i', '<leader>w', '<C-c>:w<CR>', default_opts)
+map("n", "<leader>w", ":w<CR>", default_opts)
+map("i", "<leader>w", "<C-c>:w<CR>", default_opts)
 
 -- move around splits using Ctrl + {h,j,k,l}
-map('n', '<C-h>', '<C-w>h', default_opts)
-map('n', '<C-j>', '<C-w>j', default_opts)
-map('n', '<C-k>', '<C-w>k', default_opts)
-map('n', '<C-l>', '<C-w>l', default_opts)
+map("n", "<C-h>", "<C-w>h", default_opts)
+map("n", "<C-j>", "<C-w>j", default_opts)
+map("n", "<C-k>", "<C-w>k", default_opts)
+map("n", "<C-l>", "<C-w>l", default_opts)
 
 -- close all windows and exit from neovim
-map('n', '<leader>q', ':qa!<CR>', default_opts)
+map("n", "<leader>q", ":qa!<CR>", default_opts)
 
 -- refresh configuration using R
-map('n', '<leader>r', ':source $MYVIMRC<CR>', default_opts)
+map("n", "<leader>r", ":source $MYVIMRC<CR>", default_opts)
 
 -- press <leader,[ ko jump to my placeholder '<++>' and edit it
 -- kap('', '<leader>[', '<Esc>/<++><CR>c4l', default_opts)
@@ -59,11 +58,11 @@ map('n', '<leader>r', ':source $MYVIMRC<CR>', default_opts)
 -- Not Working! map('c', 'w!!', 'w !sudo -S tee %', default_opts)
 
 -- Need Change! toggle spellcheck using <leader>sc and <leader>scc
-map('n', '<F5>', ':set spell<CR>', default_opts)
-map('n', '<F4>', ':set nospell<CR>', default_opts)
+map("n", "<F5>", ":set spell<CR>", default_opts)
+map("n", "<F4>", ":set nospell<CR>", default_opts)
 
 -- open terminal
-map('n', '<C-t>', ':Term<CR>', default_opts)
+map("n", "<C-t>", ":Term<CR>", default_opts)
 
 -- some keyshorts tips
 -- go to the file when cursor is on a filename using gf

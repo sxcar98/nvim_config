@@ -41,10 +41,6 @@ opt.linebreak = true          -- wrap on word boundary
 opt.cursorline = true         -- show a line draw under cursor
 opt.scrolloff = 5             -- always keep 5 lines under current line
 
--- remove whitespace on save
--- cmd [[au BufWritePre * :%s/\s\+$//e]]
-
-
 -- highlight on yank
 exec([[
   augroup YankHighlight

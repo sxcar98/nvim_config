@@ -9,7 +9,6 @@
 --- neovim-lua/README.md
 --- https://github.com/brainfucksec/neovim-lua#readme
 
-
 local fn = vim.fn
 local cmd = vim.cmd
 local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
@@ -49,11 +48,17 @@ return packer.startup(function()
   -- file explorer
   use 'kyazdani42/nvim-tree.lua'
 
+  -- show css color
+  use "ap/vim-css-color"
+
   -- syntax highlight
   use 'nvim-treesitter/nvim-treesitter'
 
   -- autopair
   use 'windwp/nvim-autopairs'
+
+  -- autotag for html, etc
+  use 'windwp/nvim-ts-autotag'
 
 --  -- rainbow bracket
 --  use 'p00f/nvim-ts-rainbow'
@@ -63,6 +68,9 @@ return packer.startup(function()
 
   -- remove whitespace on save
   use "cappyzawa/trim.nvim"
+
+  -- formatter for filetype LSP doesn't support yet
+  use "mhartington/formatter.nvim"
 
   -- status line
   use {

@@ -134,6 +134,11 @@ _G.packer_plugins = {
     path = "/Users/sxcar98/.local/share/nvim/site/pack/packer/start/dark-notify",
     url = "https://github.com/cormacrelf/dark-notify"
   },
+  ["formatter.nvim"] = {
+    loaded = true,
+    path = "/Users/sxcar98/.local/share/nvim/site/pack/packer/start/formatter.nvim",
+    url = "https://github.com/mhartington/formatter.nvim"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/Users/sxcar98/.local/share/nvim/site/pack/packer/start/friendly-snippets",
@@ -204,6 +209,11 @@ _G.packer_plugins = {
     path = "/Users/sxcar98/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
+  ["nvim-ts-autotag"] = {
+    loaded = true,
+    path = "/Users/sxcar98/.local/share/nvim/site/pack/packer/start/nvim-ts-autotag",
+    url = "https://github.com/windwp/nvim-ts-autotag"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/Users/sxcar98/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -228,6 +238,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/sxcar98/.local/share/nvim/site/pack/packer/start/trim.nvim",
     url = "https://github.com/cappyzawa/trim.nvim"
+  },
+  ["vim-css-color"] = {
+    loaded = true,
+    path = "/Users/sxcar98/.local/share/nvim/site/pack/packer/start/vim-css-color",
+    url = "https://github.com/ap/vim-css-color"
   },
   ["vim-mac-dictionary"] = {
     loaded = true,
