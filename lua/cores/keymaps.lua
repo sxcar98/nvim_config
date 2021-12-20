@@ -11,7 +11,7 @@ local opt = vim.opt
 -- Neovim shortcuts:
 -----------------------------------------------------------
 
-g.mapleader = ' '             -- change leader to a comma
+g.mapleader = ','             -- change leader to a comma
 opt.mouse = 'c'               -- enable mouse support
 opt.pastetoggle = '<F2>'      -- use <F2> as paste toggle
 
@@ -64,7 +64,6 @@ map('n', '<F4>', ':set nospell<CR>', default_opts)
 
 -- open terminal
 map('n', '<C-t>', ':Term<CR>', default_opts)
-
 
 -- some keyshorts tips
 -- go to the file when cursor is on a filename using gf

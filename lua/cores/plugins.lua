@@ -61,6 +61,9 @@ return packer.startup(function()
   -- commentary
   use "b3nj5m1n/kommentary"
 
+  -- remove whitespace on save
+  use "cappyzawa/trim.nvim"
+
   -- status line
   use {
     'nvim-lualine/lualine.nvim',

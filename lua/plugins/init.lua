@@ -10,6 +10,7 @@ local files = {
   'plugins/nvim-ts-rainbow',
   'plugins/nvim-autopairs',
   'plugins/kommentary',
+  'plugins/trim',
   'plugins/nvim-lspconfig',
   'plugins/luasnip',
   'plugins/nvim-cmp',
