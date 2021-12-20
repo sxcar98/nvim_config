@@ -11,7 +11,7 @@ local opt = vim.opt
 -- Neovim shortcuts:
 -----------------------------------------------------------
 
-g.mapleader = ','             -- change leader to a comma
+g.mapleader = ' '             -- change leader to a comma
 opt.mouse = 'c'               -- enable mouse support
 opt.pastetoggle = '<F2>'      -- use <F2> as paste toggle
 
@@ -19,7 +19,7 @@ opt.pastetoggle = '<F2>'      -- use <F2> as paste toggle
 map('n', '<leader>c', ':nohl<CR>', default_opts)
 
 -- map Esc to jj
-map('i', 'jj', '<Esc>', default_opts)
+-- map('i', 'jj', '<Esc>', default_opts)
 
 -- don't use arrow keys
 map('', '<up>', '<nop>', default_opts)
@@ -28,10 +28,10 @@ map('', '<left>', '<nop>', default_opts)
 map('', '<right>', '<nop>', default_opts)
 
 -- move cursor in Insert-mode using Ctrl + {h,j,k,l}
-map('i', '<C-h>', '<left>', default_opts)
+--[[ map('i', '<C-h>', '<left>', default_opts)
 map('i', '<C-j>', '<down>', default_opts)
 map('i', '<C-k>', '<up>', default_opts)
-map('i', '<C-l>', '<right>', default_opts)
+map('i', '<C-l>', '<right>', default_opts) ]]
 
 -- fast saving with <leader> and w
 map('n', '<leader>w', ':w<CR>', default_opts)
@@ -59,7 +59,7 @@ map('n', '<leader>r', ':source $MYVIMRC<CR>', default_opts)
 -- Not Working! map('c', 'w!!', 'w !sudo -S tee %', default_opts)
 
 -- Need Change! toggle spellcheck using <leader>sc and <leader>scc
-map('n', '<F3>', ':set spell<CR>', default_opts)
+map('n', '<F5>', ':set spell<CR>', default_opts)
 map('n', '<F4>', ':set nospell<CR>', default_opts)
 
 -- open terminal

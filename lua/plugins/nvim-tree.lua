@@ -52,5 +52,5 @@ require('nvim-tree').setup {
 
 
 map('n', '<leader>f', ':NvimTreeToggle<CR>', opts)       -- open/close
-map('n', '<leader>g', ':NvimTreeFindFile<CR>', opts) -- search file
+-- map('n', '<leader>g', ':NvimTreeFindFile<CR>', opts) -- search file
 

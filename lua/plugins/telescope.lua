@@ -33,9 +33,9 @@ require("telescope").setup {
 -- load_extension, somewhere after setup function:
 require("telescope").load_extension("fzf")
 
-map("n", "<leader>ff", [[<cmd>lua require('telescope.builtin').find_files()<cr>]], {})
-map("n", "<leader>fg", [[<cmd>lua require('telescope.builtin').live_grep()<cr>]], {})
-map("n", "<leader>fb", [[<cmd>lua require('telescope.builtin').buffers()<cr>]], {})
-map("n", "<leader>fh", [[<cmd>lua require('telescope.builtin').help_tags()<cr>]], {})
-map("n", "<leader>sf", [[<cmd>lua require('telescope.builtin').file_browser()<cr>]], {})
+map("n", "<leader>tt", [[<cmd>lua require('telescope.builtin').find_files()<cr>]], {})
+map("n", "<leader>g", [[<cmd>lua require('telescope.builtin').live_grep()<cr>]], {})
+map("n", "<leader>tb", [[<cmd>lua require('telescope.builtin').buffers()<cr>]], {})
+map("n", "<leader>th", [[<cmd>lua require('telescope.builtin').help_tags()<cr>]], {})
+map("n", "<leader>tf", [[<cmd>lua require('telescope.builtin').file_browser()<cr>]], {})
 map("n", "<leader>/", [[<cmd>lua require'telescope.builtin'.current_buffer_fuzzy_find{}<CR>]], {})

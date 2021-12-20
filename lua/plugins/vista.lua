@@ -39,4 +39,4 @@ cmd [[
 
 
 -- Vista tag-viewer
-map('n', 'vv', ':Vista!!<CR>', default_opts)   -- open/close
+map('n', '<leader>v', ':Vista!!<CR>', default_opts)   -- open/close
