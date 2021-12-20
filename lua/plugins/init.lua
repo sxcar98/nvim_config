@@ -1,24 +1,26 @@
 local files = {
-  'plugins/dark-notify',
-  'plugins/telescope',
-  'plugins/lualine',
-  'plugins/bufferline',
-  'plugins/vista',
-  'plugins/nvim-tree',
-  'plugins/indent-blankline',
-  'plugins/nvim-treesitter',
-  'plugins/nvim-ts-rainbow',
-  'plugins/nvim-autopairs',
-  'plugins/nvim-autotag',
-  'plugins/kommentary',
-  'plugins/trim',
-  'plugins/formatter',
-  'plugins/nvim-lspconfig',
-  'plugins/luasnip',
-  'plugins/nvim-cmp',
-  'plugins/vim-mac-dictionary',
-  'plugins/gitsigns',
+  "plugins/dark-notify",
+  "plugins/telescope",
+  "plugins/lualine",
+  "plugins/bufferline",
+  "plugins/vista",
+  "plugins/nvim-tree",
+  "plugins/indent-blankline",
+  "plugins/nvim-treesitter",
+  "plugins/nvim-ts-rainbow",
+  "plugins/nvim-autopairs",
+  "plugins/nvim-autotag",
+  "plugins/kommentary",
+  "plugins/trim",
+  "plugins/formatter",
+  "plugins/nvim-lspconfig",
+  "plugins/luasnip",
+  "plugins/nvim-cmp",
+  "plugins/vim-mac-dictionary",
+  "plugins/gitsigns",
+  "plugins/nvim-markdown-preview"
 }
+
 for _, file in ipairs(files) do
-  pcall(require,file)
+  pcall(require, file)
 end

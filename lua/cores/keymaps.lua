@@ -58,8 +58,8 @@ map("n", "<leader>r", ":source $MYVIMRC<CR>", default_opts)
 -- Not Working! map('c', 'w!!', 'w !sudo -S tee %', default_opts)
 
 -- Need Change! toggle spellcheck using <leader>sc and <leader>scc
-map("n", "<F5>", ":set spell<CR>", default_opts)
-map("n", "<F4>", ":set nospell<CR>", default_opts)
+-- map("n", "<F5>", ":set spell<CR>", default_opts)
+-- map("n", "<F4>", ":set nospell<CR>", default_opts)
 
 -- open terminal
 map("n", "<C-t>", ":Term<CR>", default_opts)
