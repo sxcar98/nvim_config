@@ -1,5 +1,5 @@
 local nvim_lsp = require "lspconfig"
-local nvim_lspconfig = require("plugins/nvim-lspconfig")
+local nvim_lspconfig = require("packers/nvim-lspconfig")
 local g = vim.g
 local map = vim.api.nvim_set_keymap
 local opts = {noremap = true, silent = false}

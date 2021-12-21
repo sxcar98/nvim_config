@@ -8,7 +8,7 @@ local files = {
   "core",
   "snippets",
   "lsp",
-  "plugins"
+  "packers"
 }
 
 for _, file in ipairs(files) do
