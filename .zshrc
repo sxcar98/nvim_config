@@ -24,8 +24,6 @@ proxytoggle () {
 # alias
 # use nvr
 alias vim=nvim
-alias python=python3
-alias pip=pip3
 
 # iterm2 integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
