@@ -1,4 +1,4 @@
-require("core/colors")
+require("core/color")
 local dn = require("dark_notify")
 
 -- Configure

@@ -1,7 +1,7 @@
 local files = {
   "core/keymaps",
   "core/packer",
-  "core/colors",
+  "core/color",
   "core/settings"
 }
 for _, file in ipairs(files) do
