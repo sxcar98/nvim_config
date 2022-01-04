@@ -130,6 +130,9 @@ return packer.startup(
       requires = "nvim-lua/plenary.nvim"
     }
 
+    -- macOS Chinese Input Switcher
+    use "ybian/smartim"
+
     -- using mac built-in dict
     use {
       "xfyuan/vim-mac-dictionary",
@@ -144,5 +147,8 @@ return packer.startup(
       "goolord/alpha-nvim"
       -- require = { 'kyazdani42/nvim-web-devicons' }
     }
+
+    --Chinese Input
+    -- use "ZSaberLv0/ZFVimIM"
   end
 )

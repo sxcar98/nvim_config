@@ -7,6 +7,7 @@ local map = vim.api.nvim_set_keymap
 local default_opts = {noremap = true, silent = false}
 local g = vim.g
 local opt = vim.opt
+local fn = vim.fn
 -----------------------------------------------------------
 -- Neovim shortcuts:
 -----------------------------------------------------------
@@ -15,11 +16,22 @@ g.mapleader = "," -- change leader to a comma
 opt.mouse = "c" -- enable mouse support
 opt.pastetoggle = "<F2>" -- use <F2> as paste toggle
 
+-- auto skip pairs
+-- uncomplete
+--[[ function SkipPair()
+  if fn.getline(".")[fn.col(".") - 1] == ")" then
+    return
+  else
+    return
+  end
+end ]]
+map("i", "<leader><leader>", "<Esc>%%a", default_opts)
+
 -- clear search highlighting
 map("n", "<leader>c", ":nohl<CR>", default_opts)
 
 -- map Esc to jj
-map('i', 'jj', '<Esc>', default_opts)
+map("i", "jj", "<Esc>", default_opts)
 
 -- don't use arrow keys
 map("", "<up>", "<nop>", default_opts)
@@ -28,10 +40,10 @@ map("", "<left>", "<nop>", default_opts)
 map("", "<right>", "<nop>", default_opts)
 
 -- move cursor in Insert-mode using Ctrl + {h,j,k,l}
---[[ map('i', '<C-h>', '<left>', default_opts)
-map('i', '<C-j>', '<down>', default_opts)
-map('i', '<C-k>', '<up>', default_opts)
-map('i', '<C-l>', '<right>', default_opts) ]]
+map("i", "<C-h>", "<left>", default_opts)
+map("i", "<C-j>", "<down>", default_opts)
+map("i", "<C-k>", "<up>", default_opts)
+map("i", "<C-l>", "<right>", default_opts)
 -- fast saving with <leader> and w
 map("n", "<leader>w", ":w<CR>", default_opts)
 map("i", "<leader>w", "<C-c>:w<CR>", default_opts)

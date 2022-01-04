@@ -229,6 +229,11 @@ _G.packer_plugins = {
     path = "/Users/sxcar98/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  smartim = {
+    loaded = true,
+    path = "/Users/sxcar98/.local/share/nvim/site/pack/packer/start/smartim",
+    url = "https://github.com/ybian/smartim"
+  },
   ["telescope-fzf-native.nvim"] = {
     loaded = true,
     path = "/Users/sxcar98/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim",

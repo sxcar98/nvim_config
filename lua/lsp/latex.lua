@@ -15,8 +15,8 @@ nvim_lsp.texlab.setup {
       rootDirectory = nil,
       build = {
         executable = "latexmk",
-        args = {"-pdf", "-interaction=nonstopmode", "-synctex=1", "%f", "-pv", "-xelatex"},
-        onSave = true,
+        args = {"-pdf", "-interaction=nonstopmode", "-synctex=1", "%f", "-xelatex"},
+        onSave = false,
         forwardSearchAfter = true
       },
       auxDirectory = ".",

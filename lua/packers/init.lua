@@ -10,7 +10,7 @@ local files = {
   "packers/nvim-treesitter",
   "packers/nvim-ts-rainbow",
   "packers/nvim-autopairs",
-  "packers/nvim-autotag",
+  "packers/nvim-ts-autotag",
   "packers/kommentary",
   "packers/trim",
   "packers/formatter",
