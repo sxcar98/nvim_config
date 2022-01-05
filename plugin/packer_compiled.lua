@@ -204,6 +204,11 @@ _G.packer_plugins = {
     path = "/Users/sxcar98/.local/share/nvim/site/pack/packer/start/nvim-markdown-preview",
     url = "https://github.com/davidgranstrom/nvim-markdown-preview"
   },
+  ["nvim-startup.lua"] = {
+    loaded = true,
+    path = "/Users/sxcar98/.local/share/nvim/site/pack/packer/start/nvim-startup.lua",
+    url = "https://github.com/henriquehbr/nvim-startup.lua"
+  },
   ["nvim-tree.lua"] = {
     loaded = true,
     path = "/Users/sxcar98/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",

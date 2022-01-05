@@ -148,7 +148,8 @@ return packer.startup(
       -- require = { 'kyazdani42/nvim-web-devicons' }
     }
 
-    --Chinese Input
-    -- use "ZSaberLv0/ZFVimIM"
+    -- vim startup time
+    use "henriquehbr/nvim-startup.lua"
+
   end
 )
