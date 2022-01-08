@@ -31,7 +31,7 @@ map("i", "<leader><leader>", "<Esc>%%a", default_opts)
 map("n", "<leader>c", ":nohl<CR>", default_opts)
 
 -- map Esc to jj
-map("i", "jj", "<Esc>", default_opts)
+-- map("i", "jj", "<Esc>", default_opts)
 
 -- don't use arrow keys
 map("", "<up>", "<nop>", default_opts)
