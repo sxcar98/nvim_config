@@ -264,6 +264,11 @@ _G.packer_plugins = {
     path = "/Users/sxcar98/.local/share/nvim/site/pack/packer/start/vim-quickui",
     url = "https://github.com/skywind3000/vim-quickui"
   },
+  ["vim-snippets"] = {
+    loaded = true,
+    path = "/Users/sxcar98/.local/share/nvim/site/pack/packer/start/vim-snippets",
+    url = "https://github.com/honza/vim-snippets"
+  },
   ["vim-transparent"] = {
     loaded = true,
     path = "/Users/sxcar98/.local/share/nvim/site/pack/packer/start/vim-transparent",

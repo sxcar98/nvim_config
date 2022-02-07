@@ -95,7 +95,8 @@ return packer.startup(
       "L3MON4D3/LuaSnip",
       requires = {
         "saadparwaiz1/cmp_luasnip",
-        "rafamadriz/friendly-snippets"
+        "rafamadriz/friendly-snippets",
+        "honza/vim-snippets"
       }
     }
 
