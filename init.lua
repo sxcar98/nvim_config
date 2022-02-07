@@ -6,7 +6,6 @@
 local files = {
   "colors",
   "core",
-  "snippets",
   "lsp",
   "packers"
 }

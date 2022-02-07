@@ -150,5 +150,6 @@ return packer.startup(
 
     -- vim startup time
     -- use "henriquehbr/nvim-startup.lua"
+
   end
 )
