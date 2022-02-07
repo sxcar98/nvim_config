@@ -20,7 +20,9 @@ local files = {
   "packers/vim-mac-dictionary",
   "packers/gitsigns",
   "packers/nvim-markdown-preview",
-  "packers/nvim-startup"
+  "packers/nvim-startup",
+  -- "packers/tex-conceal"
+  -- "packers/vimtex"
 }
 
 for _, file in ipairs(files) do

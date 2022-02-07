@@ -4,7 +4,7 @@ local files = {
   "lsp/pyright",
   "lsp/lua",
   "lsp/html",
-  "lsp/latex",
+  "lsp/latex"
   -- "lsp/markdown"
 }
 for _, file in ipairs(files) do
