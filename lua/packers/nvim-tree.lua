@@ -34,17 +34,6 @@ g.nvim_tree_icons = {
 }
 
 require("nvim-tree").setup {
-  --[[ open_on_setup = true,
-  update_cwd = true,
-  view = {
-    width = 32,
-    auto_resize = true
-  },
-  filters = {
-    dotfiles = true,
-    custom = { '.git', 'node_modules', '.cache', '.bin' },
-  },
-   ]]
   disable_netrw = true,
   hijack_netrw = true,
   open_on_setup = false,
@@ -52,7 +41,7 @@ require("nvim-tree").setup {
   auto_close = false,
   open_on_tab = false,
   hijack_cursor = false,
-  update_cwd = false,
+  update_cwd = true,
   update_to_buf_dir = {
     enable = true,
     auto_open = true
@@ -76,8 +65,8 @@ require("nvim-tree").setup {
     args = {}
   },
   filters = {
-    dotfiles = false,
-    custom = {}
+    dotfiles = true,
+    custom = {".git", "node_modules", ".cache", ".bin"}
   },
   git = {
     enable = true,
@@ -89,7 +78,7 @@ require("nvim-tree").setup {
     height = 30,
     hide_root_folder = false,
     side = "left",
-    auto_resize = false,
+    auto_resize = true,
     mappings = {
       custom_only = false,
       list = {}
