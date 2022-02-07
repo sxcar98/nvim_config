@@ -5,7 +5,7 @@ local files = {
   "lsp/lua",
   "lsp/html",
   "lsp/latex",
-  "lsp/markdown"
+  -- "lsp/markdown"
 }
 for _, file in ipairs(files) do
   pcall(require, file)

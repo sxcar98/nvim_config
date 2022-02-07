@@ -1,10 +1,10 @@
---local map = vim.api.nvim_set_keymap
---local opts = { noremap = true, silent = false }
---
---map('n', '[b', ':BufferLineCyclePrev<CR>', opts)
---map('n', ']b', ':BufferLineCycleNext<CR>', opts)
+local map = vim.api.nvim_set_keymap
+local opts = {noremap = true, silent = false}
 
- require("bufferline").setup{}
+map("n", "[b", ":BufferLineCyclePrev<CR>", opts)
+map("n", "]b", ":BufferLineCycleNext<CR>", opts)
+
+require("bufferline").setup {}
 
 local status, bufferline = pcall(require, "bufferline")
 if (not status) then
@@ -63,7 +63,7 @@ bufferline.setup {
     end,
     -- NOTE: this will be called a lot so don't do any heavy processing here
 
-    offsets = {{filetype = "NvimTree", text = "File Explorer" , highlight = "Directory" , text_align = "left" }},
+    offsets = {{filetype = "NvimTree", text = "File Explorer", highlight = "Directory", text_align = "left"}},
     -- show_buffer_icons = true | false, -- disable filetype icons for buffers
     show_buffer_icons = true, -- disable filetype icons for buffers
     --show_buffer_close_icons = true | false,
