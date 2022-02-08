@@ -632,14 +632,6 @@ require("luasnip.loaders.from_vscode").load(
   }
 )
 
--- load snipmate format snippets
-require("luasnip.loaders.from_snipmate").load(
-  {
-    paths = {
-      "~/.config/nvim/lua/snippets"
-    }
-  }
-)
 -- load extand snippets from vim-snippets
 --[[ require("luasnip.loaders.from_snipmate").load(
   {

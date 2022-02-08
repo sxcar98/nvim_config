@@ -34,11 +34,10 @@ map("n", "<leader>c", ":nohl<CR>", default_opts)
 -- map("i", "jj", "<Esc>", default_opts)
 
 -- don't use arrow keys
-map("", "<up>", "<nop>", default_opts)
-map("", "<down>", "<nop>", default_opts)
-map("", "<left>", "<nop>", default_opts)
-map("", "<right>", "<nop>", default_opts)
-
+map("", "<up>", "<C-b>", default_opts)
+map("", "<down>", "<C-f>", default_opts)
+--[[ map("", "<left>", "<nop>", default_opts)
+map("", "<right>", "<nop>", default_opts) ]]
 -- move cursor in Insert-mode using Ctrl + {h,j,k,l}
 map("i", "<C-h>", "<left>", default_opts)
 map("i", "<C-j>", "<down>", default_opts)
