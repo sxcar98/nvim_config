@@ -270,7 +270,7 @@ local plugins = {
     "mhartington/formatter.nvim",
     event = "BufWritePre",
     cmd = {
-      "Format",
+      "Format"
     },
     config = function()
       require("plugins.configs.formatter").setup()
