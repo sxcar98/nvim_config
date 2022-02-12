@@ -1,15 +1,20 @@
------------------------------------------------------------
--- Import Lua modules
------------------------------------------------------------
--- You should keep plugins module load before other modules so if
--- some plugins fall down you can still use PackerSync to fix it.
-local files = {
-  "colors",
-  "core",
-  "lsp",
-  "packers"
+local present, impatient = pcall(require, "impatient")
+
+if present then
+   impatient.enable_profile()
+end
+
+local core_modules = {
+   "core.options",
+   "core.mappings",
 }
 
-for _, file in ipairs(files) do
-  pcall(require, file)
+for _, module in ipairs(core_modules) do
+   local ok, err = pcall(require, module)
+   if not ok then
+      error("Error loading " .. module .. "\n\n" .. err)
+   end
 end
+
+-- non plugin mappings
+require("core.mappings").misc()
