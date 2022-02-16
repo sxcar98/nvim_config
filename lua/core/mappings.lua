@@ -102,9 +102,6 @@ local plugin_maps = {
     live_grep = "<leader>fw",
     oldfiles = "<leader>fo"
   },
-  vim_mac_dictionary = {
-    popup = "<leader>wd"
-  }
 }
 
 M.plugin_maps = plugin_maps
@@ -297,12 +294,6 @@ M.telescope = function()
   map("n", m.help_tags, ":Telescope help_tags <CR>")
   map("n", m.live_grep, ":Telescope live_grep <CR>")
   map("n", m.oldfiles, ":Telescope oldfiles <CR>")
-end
-
-M.vim_mac_dictionary = function()
-  local m = plugin_maps.vim_mac_dictionary
-
-  map("n", m.popup, ":MacDictPopup <CR>")
 end
 
 return M

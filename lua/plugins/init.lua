@@ -18,7 +18,6 @@ local plugins = {
     after = "packer.nvim",
     config = function()
       require("colors").init()
-      require("colors.autodark").init_dark_notify()
     end
   },
   {
@@ -233,37 +232,6 @@ local plugins = {
     end,
     setup = function()
       require("core.mappings").telescope()
-    end,
-    requires = {
-      {
-        "nvim-telescope/telescope-fzf-native.nvim",
-        module = "telescope",
-        run = "make",
-        after = "telescope.nvim",
-        config = function()
-          require("telescope").load_extension("fzf")
-        end
-      }
-    }
-  },
-  {
-    "xfyuan/vim-mac-dictionary",
-    after = "vim-quickui",
-    requires = {
-      {
-        "skywind3000/vim-quickui",
-        cmd = {
-          "MacDictPopup",
-          "MacDictWord",
-          "MacDictQuery"
-        }
-      }
-    },
-    config = function()
-      require("plugins.configs.vim_mac_dictionary")
-    end,
-    setup = function()
-      require("core.mappings").vim_mac_dictionary()
     end
   },
   {

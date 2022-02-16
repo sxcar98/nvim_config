@@ -6,17 +6,18 @@ M.settings = {
     build = {
       executable = "latexmk",
       args = {"-pdf", "-interaction=nonstopmode", "-synctex=1", "%f", "-xelatex"},
-      onSave = false,
+      onSave = true,
       forwardSearchAfter = true
     },
     auxDirectory = ".",
     forwardSearch = {
-      executable = "/Applications/Skim.app/Contents/SharedSupport/displayline",
+      executable = "C:/Users/sxcar98/AppData/Local/SumatraPDF/SumatraPDF.exe",
       args = {
-        "-r",
-        "%l",
+        "-reuse-instance",
         "%p",
-        "%f"
+        "-forward-search",
+        "%f",
+        "%l"
       }
     },
     chktex = {

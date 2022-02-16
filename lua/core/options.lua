@@ -36,7 +36,7 @@ opt.mouse = "c" --disable mouse support
 
 -- Numbers
 opt.number = true
-opt.numberwidth = 2
+-- opt.numberwidth = 2
 opt.relativenumber = false
 opt.ruler = false
 

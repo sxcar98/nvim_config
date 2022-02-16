@@ -6,13 +6,15 @@ local M = {
   transparency = true
 }
 
-local mode = require("colors.autodark").trim6(vim.fn.system("dark-notify --exit"))
+local mode = vim.fn.system({'powershell.exe', '-c', 'dark-notify'})
 
 local theme = ""
-if mode == "dark" then
-  M.theme = "gruvbox"
-else
+
+
+if (mode - 1 == 0) then
   M.theme = "one-light"
+else
+  M.theme = "gruvbox"
 end
 
 return M
