@@ -68,7 +68,7 @@ local plugin_maps = {
     session_save = "<leader>s"
   },
   -- map to <ESC> with no lag
-  better_escape = {},
+  better_escape = {"jk"},
   lspconfig = {
     declaration = "gD",
     definition = "gd",
@@ -133,7 +133,8 @@ end
 
 -- these mappings will only be called during initialization
 M.misc = function()
-  local function disable_arrowkeys()
+  local function disable_keys()
+    map_wrapper("n", "<space>", "<nop>")
     map_wrapper("", "<left>", "<nop>")
     map_wrapper("", "<right>", "<nop>")
     map_wrapper("", "<up>", "<nop>")
@@ -226,7 +227,7 @@ M.misc = function()
     cmd "silent! command PackerUpdate lua require 'plugins' require('packer').update()"
   end
 
-  disable_arrowkeys()
+  disable_keys()
   non_config_mappings()
   optional_mappings()
   required_mappings()
