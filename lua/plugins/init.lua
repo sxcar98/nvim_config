@@ -277,18 +277,24 @@ local plugins = {
     end
   },
   {
-    "davidgranstrom/nvim-markdown-preview",
-    ft = "md",
-    cmd = "MarkdownPreview",
-    config = function()
-      require("plugins.configs.MdPreview")
-    end
-  },
-  {
     "simrat39/symbols-outline.nvim",
     cmd = "SymbolsOutline",
     setup = function()
       require("plugins.configs.tagbar").setup()
+    end
+  },
+  {
+    "iamcco/markdown-preview.nvim",
+    disable = false,
+    ft = "markdown",
+    cmd = {
+      "MarkdownPreview",
+      "MarkdownPreviewStop",
+      "MarkdownPreviewToggle"
+    },
+    run = [[sh -c 'cd app && yarn install']],
+    setup = function()
+      require("plugins.configs.MarkdownPreview").setup()
     end
   }
 }
