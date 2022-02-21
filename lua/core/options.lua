@@ -61,7 +61,7 @@ opt.scrolloff = 6
 opt.updatetime = 250
 
 -- insert mode completion options
-opt.completeopt = "menuone,noselect"
+opt.completeopt = "menu,menuone,noselect"
 
 opt.lazyredraw = true -- faster scrolling
 opt.synmaxcol = 240 -- max column for syntax highlight
