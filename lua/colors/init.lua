@@ -1,13 +1,22 @@
 local M = {}
 
+local ui = require("colors.ui")
+
+local default_theme
+
 -- if theme given, load given theme if given, otherwise nvchad_theme
 M.init = function(theme)
+  local mode = require("colors.autodark").trim6(vim.fn.system("dark-notify --exit"))
   if not theme then
-    theme = require("colors.ui").theme
+    if mode == "dark" then
+      theme = "gruvbox"
+    else
+      theme = "one-light"
+    end
   end
 
   -- set the global theme, used at various places like theme switcher, highlights
-  vim.g.nvchad_theme = theme
+  default_theme = theme
 
   local present, base16 = pcall(require, "base16")
 
@@ -25,7 +34,7 @@ end
 -- returns a table of colors for given or current theme
 M.get = function(theme)
   if not theme then
-    theme = vim.g.nvchad_theme
+    theme = default_theme
   end
 
   return require("hl_themes." .. theme)
@@ -65,7 +74,7 @@ M.reload = function(theme_name)
 
   -- if theme name is empty or nil, then reload the current theme
   if theme_name == nil or theme_name == "" then
-    theme_name = vim.g.nvchad_theme
+    theme_name = default_theme
   end
 
   if not pcall(require, "hl_themes." .. theme_name) then
@@ -73,7 +82,7 @@ M.reload = function(theme_name)
     return false
   end
 
-  vim.g.nvchad_theme = theme_name
+  default_theme = theme_name
 
   -- reload the base16 theme and highlights
   M.init(theme_name)

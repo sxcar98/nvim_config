@@ -14,7 +14,7 @@ local plugins = {
     event = "VimEnter"
   },
   {
-    "NvChad/nvim-base16.lua",
+    "sxcar98/nvim-base16.lua",
     after = "packer.nvim",
     config = function()
       require("colors").init()
@@ -217,9 +217,9 @@ local plugins = {
     -- only set "after" if lazy load is disabled and vice versa for "cmd"
     after = not plugin_settings.options.nvimtree.lazy_load and "nvim-web-devicons",
     -- cmd = plugin_settings.options.nvimtree.lazy_load and { "NvimTreeToggle", "NvimTreeFocus" },
-    config = function()
-      require("plugins.configs.nvimtree").setup()
-    end,
+    -- config = function()
+    --   require("plugins.configs.nvimtree").setup()
+    -- end,
     setup = function()
       require("core.mappings").nvimtree()
     end
