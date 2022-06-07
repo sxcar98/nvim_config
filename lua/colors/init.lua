@@ -1,6 +1,8 @@
+local vim = vim
+
 local M = {}
 
-local ui = require("colors.ui")
+local config = require("colors.config")
 
 local default_theme
 
@@ -9,9 +11,9 @@ M.init = function(theme)
   local mode = require("colors.autodark").trim6(vim.fn.system("dark-notify --exit"))
   if not theme then
     if mode == "dark" then
-      theme = "gruvbox"
+      theme = config.dark_theme
     else
-      theme = "one-light"
+      theme = config.light_theme
     end
   end
 

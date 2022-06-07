@@ -1,6 +1,6 @@
 local cmd = vim.cmd
 
-local ui = require("colors.ui")
+local config = require("colors.config")
 local colors = require("colors").get()
 
 local black = colors.black
@@ -35,7 +35,7 @@ local fg_bg = require("core.utils").fg_bg
 local bg = require("core.utils").bg
 
 -- Comments
-if ui.italic_comments then
+if config.italic_comments then
   fg("Comment", grey_fg .. " gui=italic")
 else
   fg("Comment", grey_fg)
@@ -72,7 +72,7 @@ fg("LineNr", grey)
 fg("NvimInternalError", red)
 fg("VertSplit", one_bg2)
 
-if ui.transparency then
+if config.transparency then
   bg("Normal", "NONE")
   bg("Folded", "NONE")
   fg("Folded", "NONE")
@@ -154,7 +154,7 @@ for i, color in ipairs(section_title_colors) do
 end
 
 -- Disable some highlight in nvim tree if transparency enabled
-if ui.transparency then
+if config.transparency then
   bg("NormalFloat", "NONE")
   bg("NvimTreeNormal", "NONE")
   bg("NvimTreeNormalNC", "NONE")
