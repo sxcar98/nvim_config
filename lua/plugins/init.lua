@@ -13,18 +13,18 @@ local plugins = {
     "wbthomason/packer.nvim",
     event = "VimEnter"
   },
+  -- {
+  --   "sxcar98/nvim-base16.lua",
+  --   after = "packer.nvim",
+  --   config = function()
+  --   end
+  -- },
   {
-    "sxcar98/nvim-base16.lua",
+    "kyazdani42/nvim-web-devicons",
     after = "packer.nvim",
     config = function()
       require("colors").init()
       require("colors.autodark").init_dark_notify()
-    end
-  },
-  {
-    "kyazdani42/nvim-web-devicons",
-    after = "nvim-base16.lua",
-    config = function()
       require("plugins.configs.icons").setup()
     end
   },

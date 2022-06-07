@@ -20,7 +20,7 @@ M.init = function(theme)
   -- set the global theme, used at various places like theme switcher, highlights
   default_theme = theme
 
-  local present, preset = pcall(require, "base16")
+  local present, preset = pcall(require, "colors.themes")
 
   if present then
     -- first load the theme
@@ -39,7 +39,7 @@ M.get = function(theme)
     theme = default_theme
   end
 
-  return require("hl_themes." .. theme)
+  return require("colors.highlights." .. theme)
 end
 
 M.reload_plugin = function(plugins)
@@ -79,7 +79,7 @@ M.reload = function(theme_name)
     theme_name = default_theme
   end
 
-  if not pcall(require, "hl_themes." .. theme_name) then
+  if not pcall(require, "colors.highlights." .. theme_name) then
     print("No such theme ( " .. theme_name .. " )")
     return false
   end
