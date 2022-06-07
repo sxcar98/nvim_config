@@ -20,11 +20,11 @@ M.init = function(theme)
   -- set the global theme, used at various places like theme switcher, highlights
   default_theme = theme
 
-  local present, base16 = pcall(require, "base16")
+  local present, preset = pcall(require, "base16")
 
   if present then
-    -- first load the base16 theme
-    base16(base16.themes(theme), true)
+    -- first load the theme
+    preset(preset.themes(theme), true)
 
     -- unload to force reload
     package.loaded["colors.highlights" or false] = nil
@@ -86,7 +86,7 @@ M.reload = function(theme_name)
 
   default_theme = theme_name
 
-  -- reload the base16 theme and highlights
+  -- reload the theme and highlights
   M.init(theme_name)
 
   if
